@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aran2">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permiission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LearnEmotion.EmotionCollectionActivity"></activity>
+        <activity android:name=".Main.SelectPhotoActivity" />
+        <activity android:name=".LearnEmotion.RecordActivity" />
+        <activity android:name=".LearnEmotion.DrawImageActivity" />
+        <activity android:name=".LearnEmotion.OldEmotionActivity" />
+        <activity android:name=".LearnEmotion.Emotion_ListActivity" />
+        <activity android:name=".LearnEmotion.YesOrNoActivity" />
+        <activity android:name=".LearnEmotion.YoungEmotionActivity" />
+        <activity android:name=".Record.ShowRecordActivity" />
+        <activity android:name=".Solution.SolutionShowActivity"/>
+        <activity android:name=".Solution.SolutionActivity"/>
+        <activity android:name=".Solution.LovesSolutionActivity"/>
+        <activity
+            android:name=".Main.Splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login.UserInfoActivity" />
+        <activity android:name=".Login.SignUpActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Diary.ViewPagerActivity" />
+        <activity
+            android:name=".Diary.DaysAddActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".Main.MainActivity" />
+
+        <service android:name=".FirebaseConsoleMessaging.FireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
